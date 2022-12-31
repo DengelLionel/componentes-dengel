@@ -1,17 +1,17 @@
 {
   "name": "componentes-dengel",
   "license": "MIT",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/my-react-lib.umd.js",
-  "module": "./dist/my-react-lib.es.js",
+  "main": "./dist/componentes-dengel.umd.js",
+  "module": "./dist/componentes-dengel.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-react-lib.es.js",
-      "require": "./dist/my-react-lib.umd.js"
+      "import": "./dist/componentes-dengel.es.js",
+      "require": "./dist/componentes-dengel.umd.js"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",
