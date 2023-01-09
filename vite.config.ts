@@ -14,11 +14,11 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/lib/main.js"),
       // damos um nome para nossa biblioteca
       // seguindo o name no package.json
-      name: "MyReactLib",
+      name: "componentes-dengel",
       // definimos os tipos de outputs que queremos
       formats: ['es', 'umd'],
       // definimos como será o outpu dos nossos arquivos
-      fileName: (format) => `my-react-lib.${format}.js`,
+      fileName: (format) => `componentes-dengel.${format}.js`,
     },
     // definimos as configuraçoes do rollup
     rollupOptions: {
