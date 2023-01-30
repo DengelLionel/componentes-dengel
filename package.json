@@ -1,7 +1,7 @@
 {
   "name": "componentes-dengel",
   "license": "MIT",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "type": "module",
   "files": [
     "dist"
@@ -12,14 +12,6 @@
     ".": {
       "import": "./dist/componentes-dengel.es.js",
       "require": "./dist/componentes-dengel.umd.js"
-    },
-    "./dist/tailwindcss.config.cjs": {
-      "import": "./dist/tailwindcss.config.cjs",
-      "require": "./dist/tailwindcss.config.cjs"
-    },
-    "./dist/postcss.config.cjs": {
-      "import": "./dist/postcss.config.cjs",
-      "require": "./dist/postcss.config.cjs"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",
