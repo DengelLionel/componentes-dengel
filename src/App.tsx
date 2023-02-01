@@ -4,13 +4,14 @@ import './App.css'
 import HeaderMobileTypeOne from './components/Headers/HeaderMobileTypeOne'
 import NavMobileTypeOne from './components/Navs/NavMobileTypeOne'
 import NavLink from './components/Navs/NavLinks/NavLink'
+import ButtonsChangingTheme from './components/Buttons/ButtonsChangingTheme'
 function App() {
   const [openMenu, setOpenMenu] = useState(false)
 const [openSub,setOpenSub]=useState<any>({id:null,state:false})
   return (
     
     
-    <HeaderMobileTypeOne logo={<h2 className='text-white'>Hola mundo</h2>} colorHeader='bg-sky-800' openMenu={openMenu} setOpenMenu={()=>setOpenMenu(!openMenu)}>
+    <HeaderMobileTypeOne logo={<ButtonsChangingTheme/>} colorHeader='bg-sky-800' openMenu={openMenu} setOpenMenu={()=>setOpenMenu(!openMenu)}>
     
     <NavMobileTypeOne openMenu={openMenu}>
     
