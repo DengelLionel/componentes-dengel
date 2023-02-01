@@ -34,7 +34,7 @@ const HeaderMobileTypeOne = ({openMenu,setOpenMenu,children,colorHeader,logo}:he
         </section>
         
         <section  className='absolute left-[85%]'>
-        <ButtonMenu open={()=>setOpenMenu(!openMenu)} />
+        <ButtonMenu valueOpen={openMenu} open={()=>setOpenMenu(!openMenu)} />
        
         </section>
         

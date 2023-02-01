@@ -1,5 +1,14 @@
 # BIENVENIDOS A LOS COMPONENTES DE DENGEL
 ===
+**PARA UTILIZAR ESTE PAQUETE ES NECESARIO QUE PARA EMPEZAR CREE UN SU PROYECTO RAIZ LA CARPETA types y en dentro crear el archivo componentes-dengel.d.ts y añada el nombre de sus componentes**
+`
+declare module 'componentes-dengel' {
+  export const HeaderMobileTypeOne: any;
+  export const NavMobileTypeOne: any;
+
+}
+`
+===
 
 ## COMPONENTES NAV
 1. **NavMobileTypeOne**

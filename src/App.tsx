@@ -14,7 +14,10 @@ const [openSub,setOpenSub]=useState<any>({id:null,state:false})
     <HeaderMobileTypeOne logo={<ButtonsChangingTheme/>} colorHeader='bg-sky-800' openMenu={openMenu} setOpenMenu={()=>setOpenMenu(!openMenu)}>
     
     <NavMobileTypeOne openMenu={openMenu}>
-    
+      <h2 className='text-white'>contactos</h2>
+      <h2 className='text-white'>profile</h2>
+      <h2 className='text-white'>contactos</h2>
+      <h2 className='text-white'>profile</h2>
     </NavMobileTypeOne>
     </HeaderMobileTypeOne>
  /*   <NavLink 

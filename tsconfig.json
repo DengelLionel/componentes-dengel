@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/componentes-dengel.d.ts"],
+  "include": ["@types", "@types/componentes-dengel.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

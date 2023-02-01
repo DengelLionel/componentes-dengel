@@ -1,11 +1,12 @@
 import React from 'react'
 interface buttonMenu{
-    open:()=>void
+    open:()=>void,
+    valueOpen:boolean,
 }
-const ButtonMenu = ({open}:buttonMenu) => {
+const ButtonMenu = ({open,valueOpen}:buttonMenu) => {
   return (
     <section aria-labelledby="open" aria-label='menu'  onClick={open}>
-    <svg className='md:hidden' width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={`transition-all duration-700 ${valueOpen?'rotate-90':'rotate-0'} md:hidden`} width="28" height="28" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="31" height="31" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
