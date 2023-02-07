@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonMenu from '../Buttons/ButtonMenu' 
+import ButtonMenu from '../../Buttons/ButtonMenu' 
 
 /* import Nav from './Nav' */
 import { useContext,useRef,useEffect,useState } from 'react'
@@ -34,7 +34,7 @@ const HeaderMobileTypeOne = ({openMenu,setOpenMenu,children,colorHeader,logo}:he
         </section>
         
         <section  className='absolute left-[85%]'>
-        <ButtonMenu valueOpen={openMenu} open={()=>setOpenMenu(!openMenu)} />
+        <ButtonMenu valueOpen={openMenu} open={setOpenMenu} />
        
         </section>
         

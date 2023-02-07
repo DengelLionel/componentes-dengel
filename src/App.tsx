@@ -1,25 +1,34 @@
 import { useState } from 'react'
 import Card from './components/Card'
 import './App.css'
-import HeaderMobileTypeOne from './components/Headers/HeaderMobileTypeOne'
-import NavMobileTypeOne from './components/Navs/NavMobileTypeOne'
+import HeaderTwo from './components/Headers/HeaderTwo'
+import NavMobileTypeTwo from './components/Navs/movile/NavMobileTypeTwo'
+import NavDesktopTypeTwo from './components/Navs/desktop/NavDesktopTypeTwo'
 import NavLink from './components/Navs/NavLinks/NavLink'
 import ButtonsChangingTheme from './components/Buttons/ButtonsChangingTheme'
 function App() {
   const [openMenu, setOpenMenu] = useState(false)
+  const [openMenuDesktop, setOpenMenuDesktop] = useState(false)
 const [openSub,setOpenSub]=useState<any>({id:null,state:false})
   return (
     
     
-    <HeaderMobileTypeOne logo={<ButtonsChangingTheme/>} colorHeader='bg-sky-800' openMenu={openMenu} setOpenMenu={()=>setOpenMenu(!openMenu)}>
+    <HeaderTwo logo={<h2>Dengel</h2>} LinksNavDesktop={<section><h2>mundial</h2></section>} colorHeader='bg-blue-800' openMenuDesktop={openMenuDesktop}  openMenu={openMenu} navDesktopLittle={<NavDesktopTypeTwo openMenuDesktop={openMenuDesktop}>
+    <h2 className='text-white'>contactos</h2>
+    <h2 className='text-white'>profile</h2>
+    <h2 className='text-white'>contactos</h2>
+    <h2 className='text-white'>profile</h2>
+  </NavDesktopTypeTwo>} setOpenMenu={()=>{setOpenMenu(!openMenu)}} setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}>
     
-    <NavMobileTypeOne openMenu={openMenu}>
+    <NavMobileTypeTwo openMenu={openMenu}>
       <h2 className='text-white'>contactos</h2>
       <h2 className='text-white'>profile</h2>
       <h2 className='text-white'>contactos</h2>
       <h2 className='text-white'>profile</h2>
-    </NavMobileTypeOne>
-    </HeaderMobileTypeOne>
+    </NavMobileTypeTwo>
+
+    
+    </HeaderTwo>
  /*   <NavLink 
    index={[{id:1,state:false}]}
    subCategory={true}
