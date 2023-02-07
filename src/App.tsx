@@ -13,14 +13,14 @@ const [openSub,setOpenSub]=useState<any>({id:null,state:false})
   return (
     
     
-    <HeaderTwo logo={<h2>Dengel</h2>} LinksNavDesktop={<section><h2>mundial</h2></section>} colorHeader='bg-blue-800' openMenuDesktop={openMenuDesktop}  openMenu={openMenu} navDesktopLittle={<NavDesktopTypeTwo openMenuDesktop={openMenuDesktop}>
+    <HeaderTwo logo={<h2>Dengel</h2>} LinksNavDesktop={<section><h2>mundial</h2></section>} colorHeader='bg-blue-800' openMenuDesktop={openMenuDesktop}  openMenu={openMenu} navDesktopLittle={<NavDesktopTypeTwo colorNavLittleDesktop={"bg-sky-500"} openMenuDesktop={openMenuDesktop}>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
   </NavDesktopTypeTwo>} setOpenMenu={()=>{setOpenMenu(!openMenu)}} setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}>
     
-    <NavMobileTypeTwo openMenu={openMenu}>
+    <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
       <h2 className='text-white'>contactos</h2>
       <h2 className='text-white'>profile</h2>
       <h2 className='text-white'>contactos</h2>

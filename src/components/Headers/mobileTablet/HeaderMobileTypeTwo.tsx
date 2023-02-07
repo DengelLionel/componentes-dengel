@@ -6,7 +6,8 @@ interface header{
     setOpenMenu:any|undefined,
     children:any|undefined,
     colorHeader?:string|undefined,
-    logo:any|undefined
+    logo:any|undefined,
+   
 }
 const HeaderMobileTypeTwo = ({openMenu,setOpenMenu,children,colorHeader,logo}:header) => {
     const toggleContainer:any|undefined = useRef<any>(null);

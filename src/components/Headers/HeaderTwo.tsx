@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderMobileTypeTwo from './mobileTablet/HeaderMobileTypeTwo'
 import HeaderDesktopTypeTwo from './Desktop/HeaderDesktopTypeTwo'
-const HeaderTwo = ({openMenu,logo,colorHeader,setOpenMenu,children,openMenuDesktop,setOpenMenuDesktop,navDesktopLittle,LinksNavDesktop}:any) => {
+const HeaderTwo = ({openMenu,logo,colorHeader,setOpenMenu,children,openMenuDesktop,setOpenMenuDesktop,navDesktopLittle,LinksNavDesktop,colorNavLittleDesktop}:any) => {
   return (
     <div >
       {/* movile and tablet */}
