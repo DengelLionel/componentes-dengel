@@ -8,9 +8,11 @@ interface header{
     LinksNavDesktop:any|undefined,
     colorHeader?:string|undefined,
     navDesktopLittle:any|undefined,
-    logo:any|undefined
+    logo:any|undefined,
+    posicion?:any|undefined
 }
-const HeaderDesktopTypeTwo = ({LinksNavDesktop,colorHeader,logo,openMenuDesktop, setOpenMenuDesktop,navDesktopLittle}:header) => {
+const HeaderDesktopTypeTwo = ({LinksNavDesktop,colorHeader,logo,openMenuDesktop, setOpenMenuDesktop,navDesktopLittle,posicion}:header) => {
+
     const toggleContainer:any|undefined = useRef<any>(null);
 
     useEffect(() => {
@@ -18,6 +20,7 @@ const HeaderDesktopTypeTwo = ({LinksNavDesktop,colorHeader,logo,openMenuDesktop,
       return () => {
         window.removeEventListener("click", onClickOutsideHandler);
       };
+
     }); 
     const onClickOutsideHandler = (event:any) => {
       if (openMenuDesktop && !toggleContainer.current.contains(event.target)) {
@@ -26,27 +29,29 @@ const HeaderDesktopTypeTwo = ({LinksNavDesktop,colorHeader,logo,openMenuDesktop,
     };
   return (
     <div ref={toggleContainer}>
-    <header  className={`${colorHeader?colorHeader:'bg-black'}  z-[40] lg:w-full lg:h-[64px]  `}>
+    <header  className={`${colorHeader?colorHeader:'bg-black'}  z-[40] lg:w-full lg:h-[75px]  `}>
 
-      <section className='flex flex-row p-[16px]'>
+      <section className={`flex flex-row p-[16px] `}>
         <section className='cursor-pointer mr-4'>
         {logo}
         </section>
-        <section>
-        {LinksNavDesktop}
-        </section>
+
+        <section className={`lg:flex lg:w-full lg:flex-row ${posicion!==undefined?posicion:""}`}>
+          <article>
+          {LinksNavDesktop}
+          </article>
+        
+        
        
-        <section  className=' hidden lg:flex lg:flex-col '>
+        <section  className=' w-0 hidden lg:flex lg:flex-col '>
         <IconsThreePoints  open={setOpenMenuDesktop} />
         {navDesktopLittle}
+        </section>
         </section>
         
         
         </section>
     
-       
-   
-       {/* <Nav/> */}
     </header>
     </div>
   )

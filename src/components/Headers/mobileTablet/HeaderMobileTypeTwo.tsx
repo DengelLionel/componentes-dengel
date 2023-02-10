@@ -1,15 +1,17 @@
 import React from 'react'
 import IconMenuTwo from '../../Icons/IconMenuTwo'
+import NavMobileTypeTwo from '../../Navs/movile/NavMobileTypeTwo'
 import { useContext,useRef,useEffect,useState } from 'react'
 interface header{
     openMenu:any|undefined,
     setOpenMenu:any|undefined,
-    children:any|undefined,
+ 
     colorHeader?:string|undefined,
     logo:any|undefined,
+    navMobileContent:any|undefined
    
 }
-const HeaderMobileTypeTwo = ({openMenu,setOpenMenu,children,colorHeader,logo}:header) => {
+const HeaderMobileTypeTwo = ({openMenu,setOpenMenu,colorHeader,logo,navMobileContent}:header) => {
     const toggleContainer:any|undefined = useRef<any>(null);
 
     useEffect(() => {
@@ -25,26 +27,21 @@ const HeaderMobileTypeTwo = ({openMenu,setOpenMenu,children,colorHeader,logo}:he
     };
   return (
     <div ref={toggleContainer}>
-    <header  className={`${colorHeader?colorHeader:'bg-black'} lg:hidden  z-[40] w-full h-[64px]  `}>
-
-      <section className='flex flex-row p-[16px]'>
-        <section>
+    <header  className={`${colorHeader?colorHeader:'bg-black'} lg:hidden  z-[40] w-full h-[64px] items-center p-[16px]`}>
+      <section className=' flex justify-between '>
+      <section>
         {logo}
-        </section>
-        
-        <section  className='absolute left-[85%] md:left-[90%]'>
+        </section> 
+       
         <IconMenuTwo  open={setOpenMenu} />
        
-        </section>
+      </section>
+      <section className='flex justify-end space-y-4'>
+      {navMobileContent} 
+      </section>
+       
+       
         
-        
-        </section>
-    
-       <section className='fixed top-0 flex flex-row  sm:gap-[450px] xl:gap-[345px] lg:gap-[350px] xl:pl-[201px] xl:pr-[201px]'>
-        {children}
-       </section>
-   
-       {/* <Nav/> */}
     </header>
     </div>
   )

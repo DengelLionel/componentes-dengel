@@ -4,6 +4,7 @@ const IconMenuTwo = ({open},props:any) => {
   return (
 <svg
 onClick={open}
+className=""
 width={40}
 height={40}
 fill="none"

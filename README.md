@@ -46,16 +46,29 @@ declare module 'componentes-dengel' {
 - **setOpenMenuDesktop:** Obtiene el estado si es **false** o **true** de la constante **openMenuDesktop**
 -**navDesktopLittle:** El menú pequeño  de desktop
 -**LinksNavDesktop** La lista del menú pequeño.
-
+-**navMobileContent** Nav mobile.
     ***EJEMPLO GENERAL***
 
     ```tsx
-    <HeaderTwo logo={<h2>Dengel</h2>} LinksNavDesktop={<section><h2>mundial</h2></section>} colorHeader='bg-blue-800' openMenuDesktop={openMenuDesktop}  openMenu={openMenu} navDesktopLittle={<NavDesktopTypeTwo colorNavLittleDesktop={"bg-sky-500"}  openMenuDesktop={openMenuDesktop}>
+    <HeaderTwo
+     navMobileContent={ <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
-  </NavDesktopTypeTwo>} setOpenMenu={()=>{setOpenMenu(!openMenu)}} setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}>
+  </NavMobileTypeTwo>}
+     logo={<h2>Dengel</h2>} 
+     LinksNavDesktop={<section><h2>mundial</h2></section>} 
+     colorHeader='bg-blue-800' 
+     openMenuDesktop={openMenuDesktop}
+       openMenu={openMenu} 
+       navDesktopLittle={<NavDesktopTypeTwo colorNavLittleDesktop={"bg-sky-500"}  openMenuDesktop={openMenuDesktop}>
+    <h2 className='text-white'>contactos</h2>
+    <h2 className='text-white'>profile</h2>
+    <h2 className='text-white'>contactos</h2>
+    <h2 className='text-white'>profile</h2>
+  </NavDesktopTypeTwo>}
+   setOpenMenu={()=>{setOpenMenu(!openMenu)}} setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}>
     
     <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
       <h2 className='text-white'>contactos</h2>
