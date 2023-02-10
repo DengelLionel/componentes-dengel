@@ -50,34 +50,28 @@ declare module 'componentes-dengel' {
     ***EJEMPLO GENERAL***
 
     ```tsx
-    <HeaderTwo
-     navMobileContent={ <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
+   <HeaderTwo 
+    navMobileContent={ <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
   </NavMobileTypeTwo>}
-     logo={<h2>Dengel</h2>} 
-     LinksNavDesktop={<section><h2>mundial</h2></section>} 
-     colorHeader='bg-blue-800' 
-     openMenuDesktop={openMenuDesktop}
-       openMenu={openMenu} 
-       navDesktopLittle={<NavDesktopTypeTwo colorNavLittleDesktop={"bg-sky-500"}  openMenuDesktop={openMenuDesktop}>
+   posicion="lg:justify-center"
+    logo={<h2>Dengel</h2>} 
+    LinksNavDesktop={<section><h2>mundial</h2></section>} 
+    colorHeader='bg-blue-800' 
+    openMenuDesktop={openMenuDesktop}
+      openMenu={openMenu} 
+      navDesktopLittle={<NavDesktopTypeTwo 
+      colorNavLittleDesktop={"bg-sky-500"}
+       openMenuDesktop={openMenuDesktop}>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
-  </NavDesktopTypeTwo>}
-   setOpenMenu={()=>{setOpenMenu(!openMenu)}} setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}>
-    
-    <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
-      <h2 className='text-white'>contactos</h2>
-      <h2 className='text-white'>profile</h2>
-      <h2 className='text-white'>contactos</h2>
-      <h2 className='text-white'>profile</h2>
-    </NavMobileTypeTwo>
-
-    
-    </HeaderTwo>
+  </NavDesktopTypeTwo>} 
+  setOpenMenu={()=>{setOpenMenu(!openMenu)}} 
+  setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}/>
     ```
     ***IMPORTANTE: openMenu,setOpenMenu,setOpenMenuDesktop,openMenuDesktop deben ser creados por usted mismo ya sea con useState o context o como a usted le guste.***
