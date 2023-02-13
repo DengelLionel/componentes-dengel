@@ -6,4 +6,5 @@ import HeaderMobileTypeOne from "../components/Headers/mobileTablet/HeaderMobile
 import HeaderMobileTypeTwo from "../components/Headers/mobileTablet/HeaderMobileTypeTwo"
 import HeaderDesktopTypeTwo from "../components/Headers/Desktop/HeaderDesktopTypeTwo";
 import HeaderTwo from "../components/Headers/HeaderTwo";
-export { Card,NavMobileTypeOne,HeaderMobileTypeOne,HeaderDesktopTypeTwo,HeaderMobileTypeTwo,NavMobileTypeTwo,HeaderTwo,NavDesktopTypeTwo};
+import Question from "../components/Questions";
+export { Card,NavMobileTypeOne,HeaderMobileTypeOne,HeaderDesktopTypeTwo,HeaderMobileTypeTwo,NavMobileTypeTwo,HeaderTwo,NavDesktopTypeTwo,Question};
