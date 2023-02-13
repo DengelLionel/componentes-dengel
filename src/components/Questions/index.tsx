@@ -3,7 +3,7 @@ import {useEffect} from "react"
 import { useQuestions } from '../../hooks/useQuestions'
 import ItemQuestion from './ItemQuestion'
 import ContentQuestion from './ContentQuestion'
-const Question = ({questions,setIdd,idd,colorTextoActive,colorTextoDefault,colorIconActive,colorIconDefault}:any) => {
+const Question = ({questions,setIdd,idd,colorTextoActive,colorTextoDefault,colorIconActive,colorIconDefault,colorTextAnswer}:any) => {
     
   const {HandleId}=useQuestions(questions,idd)
   useEffect(()=>{
@@ -27,7 +27,7 @@ const Question = ({questions,setIdd,idd,colorTextoActive,colorTextoDefault,color
          Handle={()=>{ setIdd({id:question.id,state:!question.state})}}
           key={question.id}
            pregunta={question.question}/>
-          <ContentQuestion idd={idd} todo={question} answer={question.answer}/>
+          <ContentQuestion colorTextAnswer={colorTextAnswer} idd={idd} todo={question} answer={question.answer}/>
            </article>
     )})}
   

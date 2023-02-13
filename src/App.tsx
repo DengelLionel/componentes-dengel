@@ -57,7 +57,7 @@ setOpenMenu={()=>{setOpenMenu(!openMenu)}}
 setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}/> */}
   return (
     
-    <Question colorIconActive="#FE9800" colorIconDefault="#A599EF" colorTextoActive="text-orange-500" colorTextoDefault="tex-black" questions={questions} idd={idd} setIdd={setIdd} />
+    <Question colorTextAnswer="text-black" colorIconActive="#FE9800" colorIconDefault="#A599EF" colorTextoActive="text-orange-500" colorTextoDefault="tex-black" questions={questions} idd={idd} setIdd={setIdd} />
 
 
     
