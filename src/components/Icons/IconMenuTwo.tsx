@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo} from 'react'
 
 const IconMenuTwo = ({open},props:any) => {
   return (
@@ -20,4 +20,4 @@ xmlns="http://www.w3.org/2000/svg"
   )
 }
 
-export default IconMenuTwo
+export default memo(IconMenuTwo)

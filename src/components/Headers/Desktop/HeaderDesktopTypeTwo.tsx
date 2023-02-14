@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext,useRef,useEffect,useState } from 'react'
+import { memo,useRef,useEffect } from 'react'
 import IconsThreePoints from "../../Icons/IconsThreePoints"
 interface header{
    
@@ -57,4 +57,4 @@ const HeaderDesktopTypeTwo = ({LinksNavDesktop,colorHeader,logo,openMenuDesktop,
   )
 }
 
-export default HeaderDesktopTypeTwo
+export default memo(HeaderDesktopTypeTwo)

@@ -1,7 +1,6 @@
 import React from 'react'
 import IconMenuTwo from '../../Icons/IconMenuTwo'
-import NavMobileTypeTwo from '../../Navs/movile/NavMobileTypeTwo'
-import { useContext,useRef,useEffect,useState } from 'react'
+import { useRef,useEffect,memo } from 'react'
 interface header{
     openMenu:any|undefined,
     setOpenMenu:any|undefined,
@@ -47,4 +46,4 @@ const HeaderMobileTypeTwo = ({openMenu,setOpenMenu,colorHeader,logo,navMobileCon
   )
 }
 
-export default HeaderMobileTypeTwo
+export default memo(HeaderMobileTypeTwo)

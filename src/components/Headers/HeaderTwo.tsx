@@ -1,7 +1,8 @@
 import React from 'react'
-import {useEffect,useState} from 'react'
+import {useEffect,useState,memo} from 'react'
 import HeaderMobileTypeTwo from './mobileTablet/HeaderMobileTypeTwo'
 import HeaderDesktopTypeTwo from './Desktop/HeaderDesktopTypeTwo'
+
 const HeaderTwo = ({openMenu,logo,colorHeader,setOpenMenu,openMenuDesktop,setOpenMenuDesktop,navDesktopLittle,LinksNavDesktop,navMobileContent,posicion}:any|undefined) => {
   const [pos,setPos]=useState("lg:justify-start")
   useEffect(()=>{setPos(posicion)},[pos])
@@ -24,4 +25,4 @@ const HeaderTwo = ({openMenu,logo,colorHeader,setOpenMenu,openMenuDesktop,setOpe
   )
 }
 
-export default HeaderTwo
+export default memo(HeaderTwo)
