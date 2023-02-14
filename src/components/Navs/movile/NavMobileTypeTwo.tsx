@@ -1,4 +1,5 @@
 import React from 'react'
+import {memo} from 'react'
 interface navMobile{
     openMenu:boolean|undefined,
     children:any|undefined,
@@ -15,4 +16,4 @@ const NavMobileTypeTwo = ({openMenu,children,colorNavMobile}:navMobile) => {
   )
 }
 
-export default NavMobileTypeTwo
+export default memo(NavMobileTypeTwo)

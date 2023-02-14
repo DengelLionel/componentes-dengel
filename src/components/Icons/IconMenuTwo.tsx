@@ -1,9 +1,9 @@
 import React,{memo} from 'react'
 
-const IconMenuTwo = ({open},props:any) => {
+const IconMenuTwo = (props:any) => {
   return (
 <svg
-onClick={open}
+onClick={props.open}
 className=""
 width={40}
 height={40}

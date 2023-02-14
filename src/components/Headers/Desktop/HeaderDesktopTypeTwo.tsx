@@ -29,25 +29,25 @@ const HeaderDesktopTypeTwo = ({LinksNavDesktop,colorHeader,logo,openMenuDesktop,
     };
   return (
     <div ref={toggleContainer}>
-    <header  className={`${colorHeader?colorHeader:'bg-black'}  z-[40] lg:w-full lg:h-[75px]  `}>
+    <header  className={`${colorHeader?colorHeader:'bg-black'}  z-[40] lg:w-full lg:h-[80px] lg:pl-[30px] pr-[30px] pt-[20px] pb-[20px]  `}>
 
-      <section className={`flex flex-row p-[16px] `}>
-        <section className='cursor-pointer mr-4'>
+      <section className={`flex flex-row p-[20px] `}>
+        <section className='cursor-pointer w-full mr-4 lg:flex lg:justify-between'>
         {logo}
-        </section>
-
-        <section className={`lg:flex lg:w-full lg:flex-row ${posicion!==undefined?posicion:""}`}>
-          <article>
+       
+        <article>
           {LinksNavDesktop}
           </article>
-        
-        
-       
-        <section  className=' w-0 hidden lg:flex lg:flex-col '>
+        <section  className='  w-0 hidden lg:block lg:ml-[30px] '>
         <IconsThreePoints  open={setOpenMenuDesktop} />
+        
+        </section>
+        <section className='flex justify-end'>
         {navDesktopLittle}
         </section>
         </section>
+       
+     
         
         
         </section>

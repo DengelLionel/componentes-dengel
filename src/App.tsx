@@ -32,7 +32,10 @@ const [idd,setIdd]=useState<any|undefined>({id:0,state:false});
    answer:"Según sus datos, Musk genera ¡más de 22.500 dólares en un minuto! Unos 375 dólares en un segundo. En euros, gana casi 330 "
   }
 ] 
-{/* <HeaderTwo 
+
+  return (
+    <>
+    <HeaderTwo 
 navMobileContent={ <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
 <h2 className='text-white'>contactos</h2>
 <h2 className='text-white'>profile</h2>
@@ -41,7 +44,11 @@ navMobileContent={ <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={ope
 </NavMobileTypeTwo>}
 posicion="lg:justify-center"
 logo={<h2>Dengel</h2>} 
-LinksNavDesktop={<section><h2>mundial</h2></section>} 
+LinksNavDesktop={<section className='flex flex-row gap-[20px]'>
+<h2 className='text-white'>Mi punto de partida</h2>
+<h2 className='text-white'>Mis servicios integrales</h2>
+<h2 className='text-white'>Mi repositorio de proyectos
+</h2></section>} 
 colorHeader='bg-blue-800' 
 openMenuDesktop={openMenuDesktop}
   openMenu={openMenu} 
@@ -54,11 +61,13 @@ openMenuDesktop={openMenuDesktop}
 <h2 className='text-white'>profile</h2>
 </NavDesktopTypeTwo>} 
 setOpenMenu={()=>{setOpenMenu(!openMenu)}} 
-setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}/> */}
-  return (
-    
-    <Question colorTextAnswer="text-black" colorIconActive="#FE9800" colorIconDefault="#A599EF" colorTextoActive="text-orange-500" colorTextoDefault="tex-black" questions={questions} idd={idd} setIdd={setIdd} />
+setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}/> 
 
+<Question colorTextAnswer="text-black" colorIconActive="#FE9800" colorIconDefault="#A599EF" colorTextoActive="text-orange-500" colorTextoDefault="tex-black" questions={questions} idd={idd} setIdd={setIdd} />
+
+    </>
+    
+    
 
     
    
