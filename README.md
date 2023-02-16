@@ -47,13 +47,24 @@ declare module 'componentes-dengel' {
 -**navDesktopLittle:** El menú pequeño  de desktop
 -**LinksNavDesktop** La lista del menú pequeño.
 -**navMobileContent** Nav mobile.
+-**colorSubNav** Solo se permite color configurado en tailwindcss
+-**linksSubNav** Se permite elementos, componentes
+-**openSubNav** Abre el sub menu | booleano
+-**setOpenSubNav** Guarda booleano
     ***EJEMPLO GENERAL***
 
     ```tsx
    <HeaderTwo 
-    navMobileContent={ <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
+    navMobileContent={ <NavMobileTypeTwo 
+    colorSubNav='bg-sky-600' 
+    linksSubNav={<section><h2 className='text-white'>contactos</h2>
+<h2 className='text-white'>profile</h2></section>}
+ openSubNav={openSubNav} 
+ setOpenSubNav={setOpenSubNav}
+  colorNavMobile={"bg-red-500"} 
+  openMenu={openMenu}>
     <h2 className='text-white'>contactos</h2>
-    <h2 className='text-white'>profile</h2>
+    <h2 className='text-white'onClick={()=>setOpenSubNav(true)} >profile</h2>
     <h2 className='text-white'>contactos</h2>
     <h2 className='text-white'>profile</h2>
   </NavMobileTypeTwo>}

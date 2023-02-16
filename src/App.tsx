@@ -32,13 +32,14 @@ const [idd,setIdd]=useState<any|undefined>({id:0,state:false});
    answer:"Según sus datos, Musk genera ¡más de 22.500 dólares en un minuto! Unos 375 dólares en un segundo. En euros, gana casi 330 "
   }
 ] 
-
+const [openSubNav,setOpenSubNav]=useState(false)
   return (
     <>
     <HeaderTwo 
-navMobileContent={ <NavMobileTypeTwo colorNavMobile={"bg-red-500"} openMenu={openMenu}>
+navMobileContent={ <NavMobileTypeTwo colorSubNav='bg-sky-600' linksSubNav={<section><h2 className='text-white'>contactos</h2>
+<h2 className='text-white'>profile</h2></section>} openSubNav={openSubNav} setOpenSubNav={setOpenSubNav}  colorNavMobile={"bg-red-500"} openMenu={openMenu}>
 <h2 className='text-white'>contactos</h2>
-<h2 className='text-white'>profile</h2>
+<h2 className='text-white' onClick={()=>setOpenSubNav(true)}>profile</h2>
 <h2 className='text-white'>contactos</h2>
 <h2 className='text-white'>profile</h2>
 </NavMobileTypeTwo>}
