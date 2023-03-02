@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Card from './components/Card'
 import './App.css'
-import HeaderTwo from './components/Headers/HeaderTwo'
+import HeaderOne from './components/Headers/HeaderOne'
 import NavMobileTypeTwo from './components/Navs/movile/NavMobileTypeTwo'
 import NavDesktopTypeTwo from './components/Navs/desktop/NavDesktopTypeTwo'
 import NavLink from './components/Navs/NavLinks/NavLink'
@@ -34,8 +34,8 @@ const [idd,setIdd]=useState<any|undefined>({id:0,state:false});
 ] 
 const [openSubNav,setOpenSubNav]=useState(false)
   return (
-    <>
-    <HeaderTwo 
+    <div className='md:flex md:flex-row'>
+    <HeaderOne 
 navMobileContent={ <NavMobileTypeTwo colorSubNav='bg-sky-600' linksSubNav={<section><h2 className='text-white'>contactos</h2>
 <h2 className='text-white'>profile</h2></section>} openSubNav={openSubNav} setOpenSubNav={setOpenSubNav}  colorNavMobile={"bg-red-500"} openMenu={openMenu}>
 <h2 className='text-white'>contactos</h2>
@@ -45,7 +45,7 @@ navMobileContent={ <NavMobileTypeTwo colorSubNav='bg-sky-600' linksSubNav={<sect
 </NavMobileTypeTwo>}
 posicion="lg:justify-center"
 logo={<h2>Dengel</h2>} 
-LinksNavDesktop={<section className='flex flex-row gap-[20px]'>
+LinksNavDesktop={<section className='flex flex-col gap-[20px]'>
 <h2 className='text-white'>Mi punto de partida</h2>
 <h2 className='text-white'>Mis servicios integrales</h2>
 <h2 className='text-white'>Mi repositorio de proyectos
@@ -66,7 +66,7 @@ setOpenMenuDesktop={()=>{setOpenMenuDesktop(!openMenuDesktop)}}/>
 
 <Question colorTextAnswer="text-black" colorIconActive="#FE9800" colorIconDefault="#A599EF" colorTextoActive="text-orange-500" colorTextoDefault="tex-black" questions={questions} idd={idd} setIdd={setIdd} />
 
-    </>
+    </div>
     
     
 
